@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "wiphone",
-  "license": "ISC",
+  "license": "GPL",
   "dependencies": {
     "@rollup/plugin-terser": "^0.3.0",
     "rollup": "^3.10.0"
