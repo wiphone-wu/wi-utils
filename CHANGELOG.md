@@ -6,3 +6,4 @@
 * Update rollup2 => rollup3
 * Remove the webpack packaging method
 * Update license
+* utilsFunc file name changed to func

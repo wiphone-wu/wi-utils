@@ -1,18 +1,34 @@
 # witis
-Common js functions organized by wiphone.
+Learn the js func collated by lodash.
 
-# install
-npm install witis
+Originally called wi-utils modules,deleted.
 
-# use
-## use in vue
-* import in entry file
-* import wi from "witis";
-* Vue.prototype.$wi = wi;
-### use in page
-* this.$wi.funs();
+## installation
 
-## use in js
-### import and use in the page
-* import wi from "witis";
-* wi.funs();
+In a browser:
+```html
+<script src="witis.js"></script>
+```
+
+Using npm:
+```shell
+$ npm install witis
+```
+
+In Node.js:
+```js
+// Load the full build.
+var wi = require('witis')
+
+// Load method categories.
+var getDate = require('witis/func/getDate')
+```
+
+In Vue.js or react.js
+```js
+// Import the full build.
+import wi from "witis";
+
+// Import method categories.
+import getDate from "witis/func/getDate";
+```

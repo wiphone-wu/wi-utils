@@ -1,9 +1,9 @@
-import exactType from "./untilFunc/exactType.mjs";
-import isEmpty from "./untilFunc/isEmpty.mjs";
-import getQueryStr from "./untilFunc/getQueryStr.mjs";
-import getDate from "./untilFunc/getDate.mjs";
-import getTimestamp from "./untilFunc/getTimestamp.mjs";
-import browserEnv from "./untilFunc/browserEnv.mjs";
+import exactType from "./func/exactType.mjs";
+import isEmpty from "./func/isEmpty.mjs";
+import getQueryStr from "./func/getQueryStr.mjs";
+import getDate from "./func/getDate.mjs";
+import getTimestamp from "./func/getTimestamp.mjs";
+import browserEnv from "./func/browserEnv.mjs";
 
 const wi = {
   name: "witis",
