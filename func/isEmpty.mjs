@@ -15,14 +15,14 @@ const isEmpty = (element) => {
   let eleType = exactType(element);
   switch (eleType) {
     case 'error':
-      return new TypeError('error type parameters are invalid');
+      return new TypeError('Error type parameters are invalid');
     case 'regexp':
-      return new TypeError('regexp type parameters are invalid');
+      return new TypeError('Regexp type parameters are invalid');
     case 'function':
-      return new TypeError('function type parameters are invalid');
+      return new TypeError('Function type parameters are invalid');
     case 'date':
       if(element instanceof Date && isNaN(element.getTime())) {
-        return new TypeError('function type parameters are invalid');
+        return new TypeError('Function type parameters are invalid');
       } else {
         return false;
       }
