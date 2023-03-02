@@ -5,11 +5,6 @@ Originally called wi-utils modules,deleted.
 
 ## installation
 
-In a browser:
-```html
-<script src="witis.js"></script>
-```
-
 Using npm:
 ```shell
 $ npm install witis
