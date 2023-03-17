@@ -2,15 +2,20 @@
   "name": "witis",
   "version": "0.0.7",
   "description": "Common javascript functions organized by wiphone",
-  "main": "index.mjs",
+  "main": "index.ts",
   "scripts": {
-    "rollup": "rollup --config rollup.config.mjs",
+    "rollup": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "wiphone",
   "license": "GPL",
   "dependencies": {
     "@rollup/plugin-terser": "^0.3.0",
-    "rollup": "^3.10.0"
+    "@rollup/plugin-typescript": "^11.0.0",
+    "rollup": "^3.19.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.3",
+    "tslib": "^2.5.0"
   }
 }

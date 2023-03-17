@@ -2,6 +2,7 @@
 * Update README.md
 * Add getZnAge.mjs
 * Add test.mjs
+* Refactoring using typescript
 
 0.0.6
 * Update README.md

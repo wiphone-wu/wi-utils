@@ -1,10 +1,10 @@
-import browserEnv from "./func/browserEnv.mjs";
-import exactType from "./func/exactType.mjs";
-import getDate from "./func/getDate.mjs";
-import getQueryStr from "./func/getQueryStr.mjs";
-import getTimestamp from "./func/getTimestamp.mjs";
-import getZnAge from "./func/getZnAge.mjs";
-import isEmpty from "./func/isEmpty.mjs";
+import browserEnv from "./func/browserEnv";
+import exactType from "./func/exactType";
+import getDate from "./func/getDate";
+import getQueryStr from "./func/getQueryStr";
+import getTimestamp from "./func/getTimestamp";
+import getZnAge from "./func/getZnAge";
+import isEmpty from "./func/isEmpty";
 
 const wi = {
   name: "witis",

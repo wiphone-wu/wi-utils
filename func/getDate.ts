@@ -1,4 +1,4 @@
-import isEmpty from './isEmpty.mjs'
+import isEmpty from "./isEmpty"
 
 /*
   * Get date
@@ -9,12 +9,12 @@ import isEmpty from './isEmpty.mjs'
   * @example
   * method 1
   * getDate(1654732800000)
-  * => '2022-06-09'
+  * => "2022-06-09"
   * method 2
   * getDate()
   * => 2022-06-09 17:21:47
 */
-const getDate = (element) => {
+const getDate = (element?: any) => {
   let date = new Date();
   if(!isEmpty(element)) {
     date = new Date(element);

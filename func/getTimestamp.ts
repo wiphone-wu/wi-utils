@@ -1,4 +1,4 @@
-import isEmpty from './isEmpty.mjs'
+import isEmpty from "./isEmpty"
 
 /*
   * Get timestamp
@@ -8,13 +8,13 @@ import isEmpty from './isEmpty.mjs'
   * @returns {Number}.
   * @example
   * method 1
-  * getTimestamp('2022-06-09')
+  * getTimestamp("2022-06-09")
   * => 1654732800000
   * method 2
   * getTimestamp()
   * => 1654761791150
 */
-const getTimestamp = (element) => {
+const getTimestamp = (element?: any) => {
   let timestamp = new Date().getTime();
   if(!isEmpty(element)) {
     timestamp = new Date(element).getTime();
