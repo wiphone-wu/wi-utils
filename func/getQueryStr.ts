@@ -13,11 +13,10 @@
   * getQueryStr("name", "name=jason")
   * => jason
 */
-const getQueryStr = (paramName: string, strParams: string) => {
-  let reg = new RegExp("(^|&)" + paramName + "=([^&]*)(&|$)", "i");
-  let r = strParams?strParams.match(reg):window.location.search.substring(1).match(reg);
-  if (r != null) return decodeURI(r[2]);
-  return null;
+const getQueryStr = (paramName: string, strParams: string = window.location.search.substring(1)) => {
+  const reg = new RegExp(`(^|&)${paramName}=([^&]*)(&|$)`, "i");
+  const matchResult = strParams.match(reg);
+  return matchResult ? decodeURI(matchResult[2]) : null;
 }
 
 export default getQueryStr;

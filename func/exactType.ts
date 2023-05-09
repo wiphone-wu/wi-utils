@@ -1,9 +1,3 @@
-const classType = {}
-
-"Booblean Number String Function Array Date RegExp Object Error".split(" ").map(item => {
-  classType["[object " + item + "]"] = item.toLowerCase();
-})
-
 /*
   * Determine the data type
   *判断数据类型
@@ -14,13 +8,29 @@ const classType = {}
   * exactType("type")
   * => string
 */
-const exactType = (element: any) => {
-  if (element == null||element !== element) {
-    return element + "";
+const classTypeMap = new Map([
+  [Boolean, "boolean"],
+  [Number, "number"],
+  [String, "string"],
+  [Function, "function"],
+  [Array, "array"],
+  [Date, "date"],
+  [RegExp, "regexp"],
+  [Object, "object"],
+  [Error, "error"],
+]);
+
+const exactType = (element: any): string => {
+  if (element == null || element !== element) {
+    return `${element}`;
   }
-  return typeof element === "object" || typeof element === "function" ?
-  classType[Object.prototype.toString.call(element)] || "object" :
-  typeof element;
-}
+
+  const type = typeof element;
+  if (type === "object" || type === "function") {
+    const classType = classTypeMap.get(element.constructor) || "object";
+    return classType.toLowerCase();
+  }
+  return type;
+};
 
 export default exactType;

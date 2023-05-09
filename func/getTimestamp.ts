@@ -14,11 +14,8 @@ import isEmpty from "./isEmpty"
   * getTimestamp()
   * => 1654761791150
 */
-const getTimestamp = (element?: any) => {
-  let timestamp = new Date().getTime();
-  if(!isEmpty(element)) {
-    timestamp = new Date(element).getTime();
-  }
+const getTimestamp = (date?: Date) => {
+  const timestamp = date?.getTime() ?? Date.now();
   return timestamp;
 }
 

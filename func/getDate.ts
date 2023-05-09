@@ -15,14 +15,11 @@ import isEmpty from "./isEmpty"
   * => 2022-06-09 17:21:47
 */
 const getDate = (element?: any) => {
-  let date = new Date();
-  if(!isEmpty(element)) {
-    date = new Date(element);
-  }
-  let y = date.getFullYear(),
-  m = date.getMonth() + 1,
-  d = date.getDate();
-  return y + "-" + (m < 10 ? "0" + m : m) + "-" + (d < 10 ? "0" + d : d) + " " + date.toTimeString().substring(0, 8);
-}
+  const date = isEmpty(element) ? new Date() : new Date(element);
+  const y = date.getFullYear(),
+    m = date.getMonth() + 1,
+    d = date.getDate();
+  return `${y}-${m.toString().padStart(2, '0')}-${d.toString().padStart(2, '0')} ${date.toTimeString().substring(0, 8)}`;
+};
 
 export default getDate;
